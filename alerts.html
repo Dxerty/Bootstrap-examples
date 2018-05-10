@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Bootstrap Example</title>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<script charset="utf-8" type="text/javascript">
+	       $(document).ready(function()
+	       {
+	           $(".btn").click(function()
+	           {
+	               var $input = $(this).attr("name");
+	               $('#response').html('<div class="alert alert-' + $input + ' fade show text-center">' + '<button type="button" class="close" data-dismiss="alert">' + '&times;<\/button>alert-' + $input + '<\/div>').hide().fadeIn(1000);
+	               $(".alert").delay(3000).fadeOut("normal", function(){$(this).remove();});
+	           });
+	       });
+	</script>
+</head>
+<body>
+	<div class="container">
+		<table class="table table-striped">
+			<tbody>
+				<tr>
+					<td>alert-primary</td>
+					<td><button class="btn btn-primary btn-sm" name="primary" type="button">Demo</button></td>
+				</tr>
+				<tr>
+					<td>alert-secondary</td>
+					<td><button class="btn btn-secondary btn-sm" name="secondary" type="button">Demo</button></td>
+				</tr>
+				<tr>
+					<td>alert-success</td>
+					<td><button class="btn btn-success btn-sm" name="success" type="button">Demo</button></td>
+				</tr>
+				<tr>
+					<td>alert-danger</td>
+					<td><button class="btn btn-danger btn-sm" name="danger" type="button">Demo</button></td>
+				</tr>
+				<tr>
+					<td>alert-warning</td>
+					<td><button class="btn btn-warning btn-sm" name="warning" type="button">Demo</button></td>
+				</tr>
+				<tr>
+					<td>alert-info</td>
+					<td><button class="btn btn-info btn-sm" name="info" type="button">Demo</button></td>
+				</tr>
+				<tr>
+					<td>alert-light</td>
+					<td><button class="btn btn-light btn-sm" name="light" type="button">Demo</button></td>
+				</tr>
+				<tr>
+					<td>alert-dark</td>
+					<td><button class="btn btn-dark btn-sm" name="dark" type="button">Demo</button></td>
+				</tr>
+			</tbody>
+		</table>
+		<div id="response"></div>
+	</div>
+</body>
+</html>
